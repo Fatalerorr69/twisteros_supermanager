@@ -1,14 +1,11 @@
 #!/bin/bash
-echo "🔄 Aktualizuji Smart Suite..."
+# Automatický updater repozitáře a pluginů
 
-sudo apt update -y && sudo apt upgrade -y
-sudo docker system prune -af
+cd /opt/twisteros_supermanager
+git pull origin main
+echo "Repozitář aktualizován."
 
-cd ~/homeassistant && sudo docker compose pull && sudo docker compose up -d
-cd ~/smart-hub && sudo docker compose pull && sudo docker compose up -d
+# Aktualizace skriptů a pluginů
+bash scripts/setup_emulators.sh
 
-if [ -d ~/twister-dashboard ]; then
-    git -C ~/twister-dashboard pull || true
-fi
-
-echo "🔥 Vše úspěšně aktualizováno!"
+echo "Všechny aktualizace dokončeny."
