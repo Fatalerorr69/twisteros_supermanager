@@ -54,5 +54,11 @@ echo "[9] Synchronizace ROM/BIOs a import do RetroArch"
 ./scripts/sync_bios.sh
 ./scripts/import_roms.sh
 
+echo "[MHS] Detekce a instalace podpory displeje"
+./scripts/detect_mhs.sh || true
+./scripts/setup_mhs.sh || true
+./scripts/test_mhs.sh || true
+
+
 
 echo "[10] Hotovo. Doporučuji restartovat systém."

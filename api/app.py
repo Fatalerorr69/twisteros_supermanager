@@ -13,6 +13,9 @@ ALLOWED_SCRIPTS = {
     "sync_roms": str(HOME / "scripts/sync_roms.sh"),
     "sync_bios": str(HOME / "scripts/sync_bios.sh"),
     "import_roms": str(HOME / "scripts/import_roms.sh"),
+    "detect_mhs": str(HOME / "scripts/detect_mhs.sh"),
+    "setup_mhs": str(HOME / "scripts/setup_mhs.sh"),
+    "test_mhs": str(HOME / "scripts/test_mhs.sh")
 }
 
 def require_auth():

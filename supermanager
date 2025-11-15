@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /opt/twisteros_supermanager
+python3 api/app.py
