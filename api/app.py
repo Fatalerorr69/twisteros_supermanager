@@ -10,6 +10,9 @@ ALLOWED_SCRIPTS = {
     "retroarch": str(HOME + "/scripts/start_retroarch.sh"),
     "wine_game": str(HOME + "/scripts/start_wine_game.sh"),
     "mount_nas": str(HOME + "/scripts/mount_nas.sh"),
+    "sync_roms": str(HOME / "scripts/sync_roms.sh"),
+    "sync_bios": str(HOME / "scripts/sync_bios.sh"),
+    "import_roms": str(HOME / "scripts/import_roms.sh"),
 }
 
 def require_auth():
